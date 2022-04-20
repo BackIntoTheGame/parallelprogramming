@@ -8,4 +8,5 @@ It is likely that from now on, most of the increase in computing power will come
 ### Two ways to program a thread
 1. to create a subclass of Thread and to define the public void run() in the subclass.
    ..* This run() method defines the task that will be performed by the thread; that is, when the thread is started, it is the run() method that will be executed in the thread.
+   ..* Example: [file](src/NamedThread.java) 
 2. 
