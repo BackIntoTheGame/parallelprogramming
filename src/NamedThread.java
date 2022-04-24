@@ -10,9 +10,11 @@ public class NamedThread extends Thread{
     }
 }
 
-class TestDrive {
+class TestNamedThread {
     public static void main(String[] args) {
         NamedThread nt = new NamedThread("funfunfun");
         nt.start();
+       // not multithreading nt.run();
+        System.out.println("This is the main thread.");
     }
 }
