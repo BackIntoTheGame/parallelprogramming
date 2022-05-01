@@ -70,21 +70,25 @@ public class StatCalc {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        StatCalc calc = new StatCalc();
+        try( Scanner sc = new Scanner(System.in)) {
+            StatCalc calc = new StatCalc();
 
-        while(true){
-            System.out.println("Please enter a non-zero number to continue, or a zero to exit: ");
-            double nbr = sc.nextDouble();
-            if(nbr == 0) break;
-            calc.enter(nbr);
-        }
+            while (true) {
+                System.out.println("Please enter a non-zero number to continue, or a zero to exit: ");
+                double nbr = sc.nextDouble();
+                if (nbr == 0) break;
+                calc.enter(nbr);
+            }
 
-        System.out.println("calc.count = " + calc.getCount());
-        System.out.println("calc.max = " + calc.getMax());
-        System.out.println("calc.min = " + calc.getMin());
-        System.out.println("calc.squareSum = " + calc.getStandardDeviation());
-        System.out.println("calc.sum = " + calc.getSum());
-        System.out.println("calc.getMean() = " + calc.getMean());
+            System.out.println("calc.count = " + calc.getCount());
+            System.out.println("calc.max = " + calc.getMax());
+            System.out.println("calc.min = " + calc.getMin());
+            System.out.println("calc.squareSum = " + calc.getStandardDeviation());
+            System.out.println("calc.sum = " + calc.getSum());
+            System.out.println("calc.getMean() = " + calc.getMean());
+        } catch (Exception ignore){}
+
+        System.out.println("Program ends anyway!");
+
     }
 }  // end class StatCalc
