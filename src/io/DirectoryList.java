@@ -1,4 +1,4 @@
-package networks;
+package io;
 
 import java.io.File;
 import java.util.Scanner;
